@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 18, 22, 32;
+  --background-end-rgb: 10, 14, 20;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb))) fixed;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #121620;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00e5ff;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00b3cc;
+  }
+
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Glowing text effect */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(to right, #00e5ff, #00b3cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(0, 229, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Mask for software icons */
+.mask.mask-squircle {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 24C16.9706 24 21 19.9706 21 15V9C21 4.02944 16.9706 0 12 0H9C4.02944 0 0 4.02944 0 9V15C0 19.9706 4.02944 24 9 24H12Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 24C16.9706 24 21 19.9706 21 15V9C21 4.02944 16.9706 0 12 0H9C4.02944 0 0 4.02944 0 9V15C0 19.9706 4.02944 24 9 24H12Z' fill='black'/%3E%3C/svg%3E");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
