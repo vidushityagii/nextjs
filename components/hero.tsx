@@ -92,7 +92,7 @@ export function Hero() {
             >
               {/* Download CV */}
               <a
-                href="https://drive.google.com/file/d/1IHu7BKsp4LtOdunP4wgn9vx-gprpe8wQ/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1z4EvehyzGW0KC4TReLFnIIqzkIelenBs?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
