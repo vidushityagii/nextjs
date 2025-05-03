@@ -52,7 +52,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <span className="inline-block px-3 py-1 bg-[#00e5ff]/10 text-[#00e5ff] rounded-full text-sm font-medium mb-4">
-                Professional Video Editor
+                Visual Communicator
               </span>
             </motion.div>
 
